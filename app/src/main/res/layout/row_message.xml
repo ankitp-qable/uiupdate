@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messageRowModel" type="com.ankitsapplication.app.modules.message.data.model.MessageRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearChat"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageProfilethumbna"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_drugthumbnail_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_drugthumbnail_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup107"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5pxv"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_6pxv"
+            android:layout_weight="0.84" android:layout_width="0dp" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearGroup102"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDrMarcusHori"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.83"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{messageRowModel.txtDrMarcusHori}"
+                    style="@style/txtIntersemibold16" tools:text="@string/msg_dr_marcus_hori"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginEnd="@dimen/_3pxh"
+                    android:layout_marginStart="@dimen/_89pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.17"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{messageRowModel.txtTime}"
+                    style="@style/txtInterregular12_2" tools:text="@string/lbl_10_24"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearGroup103"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtIdonthavean"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.93"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{messageRowModel.txtIdonthavean}"
+                    style="@style/txtInterregular12" tools:text="@string/msg_i_don_t_have_an"/>
+                <ImageView android:id="@+id/imageBasicchecka"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginStart="@dimen/_29pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_basicchecka"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_basicchecka"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

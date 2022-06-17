@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drDetailsRowModel" type="com.ankitsapplication.app.modules.drdetails.data.model.DrDetailsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btn0900Am"
+            android:layout_height="@dimen/_37pxv"
+            android:layout_width="@dimen/_103pxh"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_23pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@string/lbl_09_00_am"
+            android:textAllCaps="false"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_09_00_am"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btn1000Am"
+            android:layout_height="@dimen/_37pxv"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_width="@dimen/_103pxh"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_25pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@string/lbl_10_00_am"
+            android:textAllCaps="false"
+            style="@style/btnSolidRoundedOutline_1" tools:text="@string/lbl_10_00_am"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btn1100Am"
+            android:layout_height="@dimen/_37pxv"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_width="@dimen/_103pxh"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_27pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@string/lbl_11_00_am"
+            android:textAllCaps="false"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_11_00_am"/>
+    </LinearLayout>
+</layout>

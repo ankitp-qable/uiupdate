@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.ankitsapplication.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCart"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearGroup55"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_26pxv"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearHeadergroup"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageIconlyLightAr"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_iconlylightar_1"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_iconlylightar_1"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMyCart"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2pxv"
+                        android:layout_marginEnd="@dimen/_136pxh"
+                        android:layout_marginStart="@dimen/_112pxh"
+                        android:layout_marginTop="@dimen/_3pxv"
+                        android:layout_weight="0.72"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtMyCart}"
+                        style="@style/txtIntersemibold16" tools:text="@string/lbl_my_cart"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerCart"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_25pxh}" tools:itemCount="2" tools:listitem="@layout/row_cart"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentDetail"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{cartVM.cartModel.txtPaymentDetail}"
+                style="@style/txtIntersemibold16" tools:text="@string/lbl_payment_detail"/>
+            <LinearLayout android:id="@+id/linearSubtotalgroup"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSubtotal"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtSubtotal}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_subtotal"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_232pxh"
+                    android:layout_weight="0.45"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtPrice}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_19_98"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTaxesgroup"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTaxes"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.52"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtTaxes}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_taxes"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_260pxh"
+                    android:layout_weight="0.48"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtPrice1}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_1_00"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTotalgroup"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotal"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.41"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtTotal}"
+                    style="@style/txtIntersemibold14" tools:text="@string/lbl_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_252pxh"
+                    android:layout_weight="0.59"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtPrice2}"
+                    style="@style/txtIntersemibold14" tools:text="@string/lbl_20_98"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentMethod"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_31pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{cartVM.cartModel.txtPaymentMethod}"
+                style="@style/txtIntersemibold16" tools:text="@string/lbl_payment_method"/>
+            <LinearLayout android:id="@+id/linearGroup52"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVISA"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginStart="@dimen/_22pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_weight="0.48"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtVISA}"
+                    style="@style/txtInterblackitalic16" tools:text="@string/lbl_visa"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChange"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_17pxv"
+                    android:layout_marginEnd="@dimen/_14pxh"
+                    android:layout_marginStart="@dimen/_213pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_weight="0.52"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtChange}"
+                    style="@style/txtInterregular12" tools:text="@string/lbl_change"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearGroup53"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_88pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearTotalpricegro"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.26"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTotal1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtTotal1}"
+                        style="@style/txtIntermedium14" tools:text="@string/lbl_total"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtPrice3}"
+                        style="@style/txtIntersemibold18" tools:text="@string/lbl_20_982"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnCheckout"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_75pxh"
+                    android:layout_weight="0.74"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_checkout"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded" tools:text="@string/lbl_checkout"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

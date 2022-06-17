@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drugsRowModel" type="com.ankitsapplication.app.modules.pharmacy.data.model.DrugsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageDrugthumbnail"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_drugthumbnail_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_drugthumbnail_1"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPanadol"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_8pxh"
+            android:layout_marginTop="@dimen/_29pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{drugsRowModel.txtPanadol}"
+            style="@style/txtIntersemibold12" tools:text="@string/lbl_panadol"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtQuantiity"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_8pxh"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{drugsRowModel.txtQuantiity}"
+            style="@style/txtIntermedium9" tools:text="@string/lbl_20pcs"/>
+        <LinearLayout android:id="@+id/linearGroup65"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.72" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{drugsRowModel.txtPrice}"
+                style="@style/txtIntersemibold14_2" tools:text="@string/lbl_15_99"/>
+            <ImageView android:id="@+id/imageComponent2"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:layout_marginStart="@dimen/_38pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component2"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="schedule1VM" type="com.ankitsapplication.app.modules.schedule1.data.viewmodel.Schedule1VM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGroup282"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup137" android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameGroup140"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_32pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh" android:layout_width="@dimen/_334pxh">
+                <ImageView android:id="@+id/imageComponent1"
+                    android:layout_gravity="top|end"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_moreicon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_moreicon"/>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarToolbar"
+                    android:layout_gravity="start"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent" app:contentInsetStart="0dp">
+                    <LinearLayout android:id="@+id/linearHeadergroup"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSchedule"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.82"
+                            android:layout_width="0dp"
+                            android:lineSpacingExtra="@dimen/_8pxh"
+                            android:singleLine="true"
+                            android:text="@{schedule1VM.schedule1Model.txtSchedule}"
+                            style="@style/txtIntersemibold24" tools:text="@string/lbl_schedule"/>
+                        <ImageView android:id="@+id/imageIconlyLightNo"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_marginBottom="@dimen/_4pxv"
+                            android:layout_marginStart="@dimen/_201pxh"
+                            android:layout_marginTop="@dimen/_4pxv"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_iconlylightno"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_iconlylightno"/>
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </FrameLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutGroup13"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_cyan_300_radius_8"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white_A700"
+                app:tabTextColor="@color/gray_700" style="@style/groupStylebluegray_1"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerGroup148"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearGroup142"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameGroup145"
+                android:layout_height="@dimen/_50pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageRectangle12"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_375pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_rectangle12"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle12"/>
+                <LinearLayout android:id="@+id/linearGroup143"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearGroup14"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageHome"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_22pxh"
+                            android:layout_width="@dimen/_19pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_home_1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_home_1"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtHome"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_3pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{schedule1VM.schedule1Model.txtHome}"
+                            style="@style/txtIntermedium8" tools:text="@string/lbl_home"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearGroup15"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageVector"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_21pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_messagesicon"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_messagesicon"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtMessages"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_4pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{schedule1VM.schedule1Model.txtMessages}"
+                            style="@style/txtIntermedium8" tools:text="@string/lbl_messages"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearGroup16"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageCalendar"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_23pxh"
+                            android:layout_width="@dimen/_22pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_calendar"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtAppointment"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_4pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{schedule1VM.schedule1Model.txtAppointment}"
+                            style="@style/txtIntermedium8_1" tools:text="@string/lbl_appointment"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearGroup17"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageVector1"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_21pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_vector_1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_vector_1"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtProfile"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_4pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{schedule1VM.schedule1Model.txtProfile}"
+                            style="@style/txtIntermedium8" tools:text="@string/lbl_profile"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

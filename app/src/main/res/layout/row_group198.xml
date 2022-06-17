@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="group198RowModel" type="com.ankitsapplication.app.modules.settigns.data.model.Group198RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearHeartrate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageHeartbeat"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_32pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_width="@dimen/_32pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_heartbeat"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_heartbeat"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearHeartratedeta"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtHeartrate"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{group198RowModel.txtHeartrate}"
+                style="@style/txtIntersemibold10" tools:text="@string/lbl_heart_rate"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtHeartratecoun"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{group198RowModel.txtHeartratecoun}"
+                style="@style/txtIntersemibold16_4" tools:text="@string/lbl_215bpm"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

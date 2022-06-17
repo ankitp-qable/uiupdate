@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="relatedarticleRowModel" type="com.ankitsapplication.app.modules.article.data.model.RelatedarticleRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArticledetai"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_2">
+        <ImageView android:id="@+id/imageRectangle541"
+            android:layout_height="@dimen/_59pxh"
+            android:layout_marginBottom="@dimen/_6pxv"
+            android:layout_marginStart="@dimen/_5pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="@dimen/_59pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_rectangle541}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle541"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup25"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_11pxv"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_weight="0.74" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:id="@+id/txtTheHealthiest"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:text="@{relatedarticleRowModel.txtTheHealthiest}"
+                style="@style/txtIntersemibold12_1" tools:text="@string/msg_the_25_healthie"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGroup88"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{relatedarticleRowModel.txtLanguage}"
+                    style="@style/txtIntermedium9" tools:text="@string/lbl_jun_10_20212"/>
+                <View
+                    android:background="@drawable/rectangle_bg_gray_500_radius_1"
+                    android:id="@+id/viewEllipse1"
+                    android:layout_height="@dimen/_2pxh"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_5pxv" android:layout_width="@dimen/_2pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{relatedarticleRowModel.txtTime}"
+                    style="@style/txtIntermedium9_1" tools:text="@string/lbl_5min_read2"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageIconlyBoldBoo"
+            android:layout_height="@dimen/_15pxh"
+            android:layout_marginBottom="@dimen/_43pxv"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_23pxh"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="@dimen/_15pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_iconlyboldboo"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_iconlyboldboo"/>
+    </LinearLayout>
+</layout>
