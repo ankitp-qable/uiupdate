@@ -13,7 +13,7 @@
             android:layout_marginStart="@dimen/_20pxh"
             android:layout_marginTop="@dimen/_25pxv"
             android:layout_width="@dimen/_72pxh"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop" circular="@{true}"
             imageRes="@{@drawable/img_drugthumbnail}"
             tools:ignore="ContentDescription" tools:src="@drawable/img_drugthumbnail"/>
         <LinearLayout android:gravity="start"
