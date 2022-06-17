@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messageVM" type="com.ankitsapplication.app.modules.message.data.viewmodel.MessageVM"/>
+    </data>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessage"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_19pxh"
+        android:layout_marginStart="@dimen/_21pxh"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_message"/>
+</layout>

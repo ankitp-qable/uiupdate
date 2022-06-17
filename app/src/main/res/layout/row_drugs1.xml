@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drugs1RowModel" type="com.ankitsapplication.app.modules.pharmacy.data.model.Drugs1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <ImageView android:id="@+id/imageDrugthumbnail"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_27pxv"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_drugthumbnail_3}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_drugthumbnail_3"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOBHCombi"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_29pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{drugs1RowModel.txtOBHCombi}"
+            style="@style/txtIntersemibold12" tools:text="@string/lbl_obh_combi"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMeasurement"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{drugs1RowModel.txtMeasurement}"
+            style="@style/txtIntermedium9" tools:text="@string/lbl_75ml"/>
+        <LinearLayout android:id="@+id/linearGroup77"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8pxv"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.69" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{drugs1RowModel.txtPrice}"
+                style="@style/txtIntersemibold14_2" tools:text="@string/lbl_9_99"/>
+            <ImageView android:id="@+id/imageComponent2"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_marginEnd="@dimen/_8pxh"
+                android:layout_marginStart="@dimen/_45pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component2_2"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component2_2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
